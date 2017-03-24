@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Kinect2VrExamples/DemoScenes/AvatarDemo/KinectAvatarDemo1.unity
+- path: Assets/Monuments_ Proof of Concept.unity
   isLoaded: 1
   isActive: 1
