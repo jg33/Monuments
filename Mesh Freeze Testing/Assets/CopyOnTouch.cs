@@ -11,22 +11,25 @@ public class CopyOnTouch : MonoBehaviour {
 	MeshCollider thisCollider;
 
 	Mesh thisMesh;
-	Mesh newMesh;
+	Vector3[] dyingVerts;
 	public int copyCount = 0;
 
 	// Use this for initialization
 	void Start () {
 		thisMesh = gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh;
-		newMesh = new Mesh();
+		dyingVerts = thisMesh.vertices;
 
 		thisCollider = gameObject.GetComponent<MeshCollider>();
 		thisCollider.sharedMesh = thisMesh; 
 		thisMesh.MarkDynamic();
 
-		newMesh.vertices = gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh.vertices;
-		newMesh.triangles = thisMesh.triangles;
+//		newMesh.triangles = thisMesh.triangles;
+//		newMesh.MarkDynamic();
 
-		newMesh.MarkDynamic();
+		// copy so we don't overwrite:
+		Mesh oldMesh = GetComponent<SkinnedMeshRenderer>().sharedMesh;
+		Mesh newMesh = (Mesh)Object.Instantiate(oldMesh);
+		GetComponent<SkinnedMeshRenderer>().sharedMesh = newMesh;
 
 	}
 	
@@ -34,6 +37,8 @@ public class CopyOnTouch : MonoBehaviour {
 	void Update () {
 		if (didTrigger && duplicateMeshObj){
 			//duplicateMesh.gameObject.GetComponent<MeshFilter>().mesh = gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+
+
 
 			if( copyCount < thisMesh.vertexCount ){
 				//duplicateMesh.gameObject.GetComponent<MeshFilter>().mesh.vertices. ;
@@ -79,12 +84,15 @@ public class CopyOnTouch : MonoBehaviour {
 				//Debug.Log(duplicateMeshObj.GetComponent<MeshFilter>().mesh.vertices[copyCount]);
 
 				// REMOVE //
-//				newMesh.vertices[copyCount] = new Vector3(0,0,0);
-//				gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh = newMesh;
-//
-//				thisMesh.RecalculateBounds();
-//				thisMesh.RecalculateNormals();
-//
+				dyingVerts[copyCount] = new Vector3(0,0,0);
+//				Mesh tempDeathMesh = new Mesh();
+//				tempDeathMesh.triangles = thisMesh.triangles;
+//				tempDeathMesh.vertices = dyingVerts;
+				gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh.vertices = dyingVerts;
+
+				thisMesh.RecalculateBounds();
+				thisMesh.RecalculateNormals();
+
 
 				// ITERATE //
 				copyCount++;
