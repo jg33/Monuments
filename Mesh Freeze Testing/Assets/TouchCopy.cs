@@ -20,7 +20,7 @@ public class TouchCopy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider _c){
-		Debug.Log("Collided");
+	//	Debug.Log("Collided");
 		if(_c.gameObject == targetMesh){
 			StartCoroutine("CheckVertDist");
 		}
