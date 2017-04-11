@@ -32,8 +32,8 @@ public class CopyOnTouch : MonoBehaviour {
 		GetComponent<SkinnedMeshRenderer>().sharedMesh = newMesh;
 
 		//set to draw as points?
-		//thisMesh.SetIndices(thisMesh.GetIndices(0), MeshTopology.Points, 0);
-		// ^ this fucks up colliders
+		//thisMesh.SetIndices(thisMesh.GetIndices(0), MeshTopology.Triangles, 0);
+		// ^ this fucks up colliderst
 	}
 	
 	// Update is called once per frame
