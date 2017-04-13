@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{8BEC79DE-AB6E-A66E-6448-CE05C826A64B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity 5.5/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity 5.5/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectMover.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\Asteroid.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\AsteroidExplosion.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\EnvironmentController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\ExplosionPhysicsForce.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerAlignmentChecker.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerGameController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerHealthController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerLaser.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerLaserController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\FlyerMovementController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\ParticleSystemMultiplier.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\Ring.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\SessionData.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\UIController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\CubeGestureListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\CubePresentationScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\FlyerGestureListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\GameRestartListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\ModelGestureListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\Scripts\ModelPresentationScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\GrabDropScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\GrabRotateScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\HandInteractionListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\HandRaycaster.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\RotateAround.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\InteractionDemo\Scripts\SnowflakeSpawner.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\SpeechDemo\Scripts\BotControlScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\SpeechDemo\Scripts\GameControlScript.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\DemoScenes\SpeechDemo\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\AvatarController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\AvatarControllerClassic.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\AvatarScaler.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\BackgroundRemovalManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Cubeman\CubemanController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Cubeman\PointmanController.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\FacetrackingManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Filters\BoneOrientationsConstraint.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Filters\JointPositionsFilter.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\HeadMover.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\InteractionInputModule.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\InteractionManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Interfaces\DepthSensorInterface.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Interfaces\DummyK1Interface.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Interfaces\DummyK2Interface.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\KinectDataClient.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\KinectGestures.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\KinectInterop.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\KinectManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\KinectRecorderPlayer.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\MultiScene\LoadFirstLevel.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\MultiScene\LoadLevelWhenNoUser.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\MultiScene\LoadLevelWhenUserDetected.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\MultiScene\LoadLevelWithDelay.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\MultiScene\LocateAvatarsAndGestureListeners.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\PortraitBackground.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\CameraRollFixer.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\FollowUserRotation.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\GetJointPositionDemo.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\HandTrigger.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\JointOrientationView.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\JointPositionView.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\MouseControl.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\RaiseHandListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\SimpleBackgroundRemoval.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\SimpleGestureListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\SimpleInteractionListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\Samples\SimpleVisualGestureListener.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\SpeechManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VisualGestureManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\ObjectPool.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\Reticle.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\SelectionRadial.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\SelectionSlider.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\UIFader.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\UIMovement.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\UITint.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRCameraFade.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRCameraUI.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRDeviceManager.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VREyeRaycaster.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRFPSCounter.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRInput.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRInteractiveItem.cs" />
+     <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRTrackingReset.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestTrackedCamera.cs" />
+     <Compile Include="Assets\SteamVR\Extras\SteamVR_TrackedController.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\BodyCollider.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\CircularDrive.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ComplexThrowable.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ControllerHoverHighlight.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\CustomEvents.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DebugUI.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnDetachedFromHand.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnParticleSystemDeath.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnTriggerEnter.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DistanceHaptics.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DontDestroyOnLoad.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\EnumFlags.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\FallbackCameraController.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Hand.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\HapticRack.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\HideOnHandFocusLost.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\IgnoreHovering.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InputModule.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Interactable.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InteractableButtonEvents.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InteractableHoverEvents.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackage.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackageReference.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackageSpawner.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAnimation.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAnimator.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAudioPitch.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearBlendshape.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearDisplacement.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearDrive.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearMapping.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\PlaySound.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Player.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SeeThru.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SleepOnAwake.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SoundDeparent.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SoundPlayOneshot.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachAfterControllerIsTracking.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachToHand.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnRenderModel.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Throwable.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\UIElement.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Unparent.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Util.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\VelocityEstimator.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Hints\Scripts\ControllerButtonHints.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArcheryTarget.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Arrow.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArrowHand.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArrowheadRotation.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Balloon.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonColliders.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonHapticBump.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonSpawner.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ExplosionWobble.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\FireSource.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Longbow.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\SoundBowClick.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Samples\Scripts\ControllerHintsExample.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Samples\Scripts\InteractableExample.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\AllowTeleportWhileAttachedToHand.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\ChaperoneInfo.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\IgnoreTeleportTrace.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\Teleport.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArc.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArea.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportMarkerBase.cs" />
+     <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportPoint.cs" />
+     <Compile Include="Assets\SteamVR\Plugins\openvr_api.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Camera.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_CameraFlip.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_CameraMask.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Controller.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_ControllerManager.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Ears.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Events.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_ExternalCamera.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Fade.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Frustum.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_GameView.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_IK.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_LoadLevel.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Menu.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Overlay.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_PlayArea.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Render.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_RenderModel.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Skybox.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_SphericalProjection.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Stats.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TestController.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedCamera.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+     <Compile Include="Assets\freezer\CopyFBXMesh.cs" />
+     <Compile Include="Assets\freezer\CopyMesh.cs" />
+     <Compile Include="Assets\freezer\CopyOnTouch.cs" />
+     <Compile Include="Assets\freezer\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+     <Compile Include="Assets\freezer\Plugins\MeshExtrusion.cs" />
+     <Compile Include="Assets\freezer\Plugins\Perlin.cs" />
+     <Compile Include="Assets\freezer\TouchCopy.cs" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BlurShader.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\DepthShader.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BlurShader3.shader" />
+     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
+     <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
+     <None Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Color2DepthShader.shader" />
+     <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
+     <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BlurShader2.shader" />
+     <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\UIOverlay.shader" />
+     <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Depth2ColorShader.shader" />
+     <None Include="Assets\freezer\Lava_Flowing_Shader\ReadMe.txt" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\FlippedColorBodyShader.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Erode.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BodyShader.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Dilate.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
+     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
+     <None Include="Assets\SteamVR\readme.txt" />
+     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
+     <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Color2BodyShader.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
+     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
+     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity 5.5/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="LZ4Sharp">
+ <HintPath>/Users/jesse/Dropbox/CalArts/Living Room Interactive/Monuments/monuments_v1/Assets/Kinect2VrExamples/KinectScripts/LZ4Sharp/LZ4Sharp.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

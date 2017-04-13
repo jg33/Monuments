@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TouchCopy.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Assets/CopyMesh.cs" Line="92" Column="26" />
-      <File FileName="Assets/TouchCopy.cs" Line="48" Column="3" />
+      <File FileName="Assets/CopyMesh.cs" Line="1" Column="1" />
+      <File FileName="Assets/TouchCopy.cs" Line="1" Column="1" />
       <File FileName="Assets/Sources/PaintVertices.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
