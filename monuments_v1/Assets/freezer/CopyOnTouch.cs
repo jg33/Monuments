@@ -9,19 +9,21 @@ public class CopyOnTouch : MonoBehaviour {
 	public GameObject meshCopyPrefab;
 	public GameObject copyContainer;
 
-	MeshCollider thisCollider;
+	Collider thisCollider;
 
 	Mesh thisMesh;
 	Vector3[] dyingVerts;
 	public int copyCount = 0;
+
+  //  Mesh originalMesh;
 
 	// Use this for initialization
 	void Start () {
 		thisMesh = gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh;
 		dyingVerts = thisMesh.vertices;
 
-		thisCollider = gameObject.GetComponent<MeshCollider>();
-		thisCollider.sharedMesh = thisMesh; 
+		//thisCollider = gameObject.GetComponent<MeshCollider>();
+		//thisCollider.sharedMesh = thisMesh; 
 		thisMesh.MarkDynamic();
 
 //		newMesh.triangles = thisMesh.triangles;
@@ -29,7 +31,8 @@ public class CopyOnTouch : MonoBehaviour {
 
 		// copy so we don't overwrite:
 		Mesh oldMesh = GetComponent<SkinnedMeshRenderer>().sharedMesh;
-		Mesh newMesh = (Mesh)Object.Instantiate(oldMesh);
+        Mesh newMesh = (Mesh)Instantiate(oldMesh);
+
 		GetComponent<SkinnedMeshRenderer>().sharedMesh = newMesh;
 
 		//set to draw as points?
@@ -122,9 +125,12 @@ public class CopyOnTouch : MonoBehaviour {
 		//Instantiate(meshCopyPrefab, copyContainer.transform);
 
 		//local space
-		duplicateMeshObj = Instantiate(meshCopyPrefab, gameObject.transform.position, gameObject.transform.rotation) ;
-		duplicateMeshObj.transform.localScale= new Vector3(0.714f,0.714f,0.714f);
-		//
+		duplicateMeshObj = Instantiate(meshCopyPrefab) ;
+        duplicateMeshObj.transform.localPosition = new Vector3(-gameObject.transform.parent.position.x*0.714f, -gameObject.transform.parent.position.y*0.714f, -gameObject.transform.parent.position.z*0.714f);
+        duplicateMeshObj.transform.localScale= new Vector3(0.714f,0.714f,0.714f);
+        duplicateMeshObj.transform.parent = copyContainer.transform;
+		
+        //
 		Mesh dupeMesh = duplicateMeshObj.GetComponent<MeshFilter>().mesh;
 		dupeMesh.vertices = thisMesh.vertices;
 		dupeMesh.triangles = thisMesh.triangles;
