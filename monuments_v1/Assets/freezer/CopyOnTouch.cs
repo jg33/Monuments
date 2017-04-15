@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CopyOnTouch : MonoBehaviour {
 
-	public bool didTrigger = false;
+     bool didTrigger = false;
 	private GameObject duplicateMeshObj;
 	public GameObject meshCopyPrefab;
 	public GameObject copyContainer;
@@ -13,7 +13,9 @@ public class CopyOnTouch : MonoBehaviour {
 
 	Mesh thisMesh;
 	Vector3[] dyingVerts;
-	public int copyCount = 0;
+	int copyCount = 0;
+
+    public Transform dupeVertexOrigin;
 
   //  Mesh originalMesh;
 
@@ -34,7 +36,7 @@ public class CopyOnTouch : MonoBehaviour {
         Mesh newMesh = (Mesh)Instantiate(oldMesh);
 
 		GetComponent<SkinnedMeshRenderer>().sharedMesh = newMesh;
-
+        thisMesh = newMesh;
 		//set to draw as points?
 		//thisMesh.SetIndices(thisMesh.GetIndices(0), MeshTopology.Triangles, 0);
 		// ^ this fucks up colliderst
@@ -53,34 +55,46 @@ public class CopyOnTouch : MonoBehaviour {
 				// COPY //
 				Vector3[] tempVerts = duplicateMeshObj.GetComponent<MeshFilter>().mesh.vertices;
 				Vector3 thisPoint = transform.TransformPoint(thisMesh.vertices[copyCount]);
-			
-				// modify by bones
-				Matrix4x4[] boneMatrices = new Matrix4x4[gameObject.GetComponent<SkinnedMeshRenderer>().bones.Length];
-				for (int i = 0; i < boneMatrices.Length; i++)
-					boneMatrices[i] = gameObject.GetComponent<SkinnedMeshRenderer>().bones[i].localToWorldMatrix * gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh.bindposes[i];
 
-					BoneWeight weight = gameObject.GetComponent<SkinnedMeshRenderer>().sharedMesh.boneWeights[copyCount];
+                // modify by bones
+             
+            SkinnedMeshRenderer skin = gameObject.GetComponent<SkinnedMeshRenderer>();
+            Mesh mesh = skin.sharedMesh;
+ 
+            int vertexCount = mesh.vertexCount;
+            Vector3[] vertices = new Vector3[vertexCount];
 
-					Matrix4x4 bm0 = boneMatrices[weight.boneIndex0];
-					Matrix4x4 bm1 = boneMatrices[weight.boneIndex1];
-					Matrix4x4 bm2 = boneMatrices[weight.boneIndex2];
-					Matrix4x4 bm3 = boneMatrices[weight.boneIndex3];
+            Matrix4x4[] boneMatrices = new Matrix4x4[skin.bones.Length];
+            for (int i = 0; i < boneMatrices.Length; i++) boneMatrices[i] = skin.bones[i].localToWorldMatrix * mesh.bindposes[i];
+ 
+        
+            BoneWeight weight = mesh.boneWeights[copyCount];
+ 
+            Matrix4x4 bm0 = boneMatrices[weight.boneIndex0];
+            Matrix4x4 bm1 = boneMatrices[weight.boneIndex1];
+            Matrix4x4 bm2 = boneMatrices[weight.boneIndex2];
+            Matrix4x4 bm3 = boneMatrices[weight.boneIndex3];
+ 
+            Matrix4x4 vertexMatrix = new Matrix4x4();
+ 
+            for (int n = 0; n < 16; n++){
+                vertexMatrix[n] =
+                    bm0[n] * weight.weight0 +
+                    bm1[n] * weight.weight1 +
+                    bm2[n] * weight.weight2 +
+                    bm3[n] * weight.weight3;
+             }
+ 
+                thisPoint = vertexMatrix.MultiplyPoint3x4(mesh.vertices[copyCount]);
+                thisPoint *= 1.4f;
+                thisPoint += dupeVertexOrigin.transform.position;
 
-					Matrix4x4 vertexMatrix = new Matrix4x4();
+            // normals[i] = vertexMatrix.MultiplyVector(mesh.normals[i]);
+            
+                
 
-					for (int n = 0; n < 16; n++)
-					{
-						vertexMatrix[n] =
-							bm0[n] * weight.weight0 +
-							bm1[n] * weight.weight1 +
-							bm2[n] * weight.weight2 +
-							bm3[n] * weight.weight3;
-					}
 
-					thisPoint = vertexMatrix.MultiplyPoint3x4(thisPoint);
-					//normals[i] = vertexMatrix.MultiplyVector(mesh.normals[i]);
-
-				tempVerts[copyCount] = thisPoint;
+                tempVerts[copyCount] = thisPoint;
 
 				duplicateMeshObj.GetComponent<MeshFilter>().mesh.vertices =  tempVerts;
 
@@ -91,7 +105,7 @@ public class CopyOnTouch : MonoBehaviour {
 				//Debug.Log(duplicateMeshObj.GetComponent<MeshFilter>().mesh.vertices[copyCount]);
 
 				// REMOVE //
-				dyingVerts[copyCount] = new Vector3(0,0,0);
+				dyingVerts[copyCount] = dyingVerts[0];
 //				Mesh tempDeathMesh = new Mesh();
 //				tempDeathMesh.triangles = thisMesh.triangles;
 //				tempDeathMesh.vertices = dyingVerts;
@@ -120,34 +134,42 @@ public class CopyOnTouch : MonoBehaviour {
 
 	}
 
-	void CopySelf(){
-		//world space
-		//Instantiate(meshCopyPrefab, copyContainer.transform);
+    void CopySelf()
+    {
+        //world space
+        //Instantiate(meshCopyPrefab, copyContainer.transform);
+        if (!didTrigger)
+        {
+            //local space
+            duplicateMeshObj = Instantiate(meshCopyPrefab);
+            duplicateMeshObj.transform.localPosition = new Vector3(-gameObject.transform.parent.position.x * 0.714f, -gameObject.transform.parent.position.y * 0.714f, -gameObject.transform.parent.position.z * 0.714f);
+            duplicateMeshObj.transform.localScale = new Vector3(0.714f, 0.714f, 0.714f);
+            duplicateMeshObj.transform.parent = copyContainer.transform;
+            duplicateMeshObj.name = gameObject.name + "_copy";
 
-		//local space
-		duplicateMeshObj = Instantiate(meshCopyPrefab) ;
-        duplicateMeshObj.transform.localPosition = new Vector3(-gameObject.transform.parent.position.x*0.714f, -gameObject.transform.parent.position.y*0.714f, -gameObject.transform.parent.position.z*0.714f);
-        duplicateMeshObj.transform.localScale= new Vector3(0.714f,0.714f,0.714f);
-        duplicateMeshObj.transform.parent = copyContainer.transform;
-		
-        //
-		Mesh dupeMesh = duplicateMeshObj.GetComponent<MeshFilter>().mesh;
-		dupeMesh.vertices = thisMesh.vertices;
-		dupeMesh.triangles = thisMesh.triangles;
-		dupeMesh.name = "Dupe Mesh";
-		Vector3[] tempVerts = dupeMesh.vertices;
+            //
+            Mesh dupeMesh = duplicateMeshObj.GetComponent<MeshFilter>().mesh;
+            dupeMesh.vertices = thisMesh.vertices;
+            dupeMesh.triangles = thisMesh.triangles;
+            dupeMesh.name = "Dupe Mesh";
+            Vector3[] tempVerts = dupeMesh.vertices;
 
-		for(int i = 0; i < tempVerts.Length;i++){
-			tempVerts[i] = dupeMesh.vertices[0];
-		}
-		dupeMesh.vertices = tempVerts;
-
-		dupeMesh.MarkDynamic();
-
-		duplicateMeshObj.GetComponent<MeshFilter>().mesh = dupeMesh;
-		duplicateMeshObj.name = gameObject.name+"_copy";
-		didTrigger = true;
+            Debug.Log("tempVerts: " + tempVerts.Length);
 
 
-	}
+            for (int i = 0; i < tempVerts.Length; i++)
+            {
+                tempVerts[i] = (dupeMesh.vertices[0] + dupeVertexOrigin.position);
+            }
+            dupeMesh.vertices = tempVerts;
+
+            dupeMesh.MarkDynamic();
+
+            duplicateMeshObj.GetComponent<MeshFilter>().mesh = dupeMesh;
+
+            didTrigger = true;
+
+
+        }
+    }
 }

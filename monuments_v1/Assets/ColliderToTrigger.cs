@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderToTrigger : MonoBehaviour {
     public GameObject meshToTrigger;
+    public float delay=0;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,9 +15,21 @@ public class ColliderToTrigger : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter(Collider _c)
+    void OnTriggerEnter(Collider _c) {
+        if (_c.name == "Touch"){
+            if (delay > 0) {
+                StartCoroutine(startWithDelay(delay));
+            }
+            else {
+                meshToTrigger.SendMessage("CopySelf");
+            }
+        }
+    }
+
+    IEnumerator startWithDelay(float _secs)
     {
-        if(_c.name == "Touch") meshToTrigger.SendMessage("CopySelf");
+        yield return new WaitForSeconds(_secs);
+        meshToTrigger.SendMessage("CopySelf");
 
     }
 }
