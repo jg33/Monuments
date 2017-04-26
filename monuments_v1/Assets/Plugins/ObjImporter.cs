@@ -95,11 +95,12 @@ public class ObjImporter {
 		Mesh mesh = new Mesh();
 
 		mesh.vertices = newVerts;     
-		mesh.uv = _oldMesh.uv;        
-		mesh.normals = _oldMesh.normals;
+//		mesh.uv = _oldMesh.uv;        
+//		mesh.normals = _oldMesh.normals;
 		mesh.triangles = _oldMesh.triangles;
 
 		mesh.RecalculateBounds();
+		mesh.MarkDynamic();
 
 		return mesh;
 	}

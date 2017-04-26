@@ -30,7 +30,10 @@ public class MeshSaveLoad : MonoBehaviour {
 		originalMesh = player.transform.Find(gameObject.name).GetComponent<CopyOnTouch>().thisMesh; 
 
 		Debug.Log("Loading "+"Assets/SavedMeshes/"+id.ToString()+"_"+gameObject.name);
-		GetComponent<MeshFilter>().mesh = ObjImporter.ImportFileWithHelp("Assets/SavedMeshes/"+id.ToString()+"_"+gameObject.name+"_copy.obj",originalMesh);
+		GameObject newObj = OBJLoader.LoadOBJFile("Assets/SavedMeshes/"+id.ToString()+"_"+gameObject.name+"_copy.obj");
+		GetComponent<MeshFilter>().mesh = newObj.GetComponentInChildren<MeshFilter>().mesh;
+		GameObject.Destroy(newObj);
+		//GetComponent<MeshFilter>().mesh = ObjImporter.ImportFileWithHelp("Assets/SavedMeshes/"+id.ToString()+"_"+gameObject.name+"_copy.obj",originalMesh);
 		Debug.Log("Loaded "+gameObject.name);
 	}
 }
