@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Proof of Concept 2.unity
+- path: Assets/Scenes/SaveTest.unity
   isLoaded: 1
   isActive: 1
