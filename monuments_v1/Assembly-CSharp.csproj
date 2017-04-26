@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AnimateSky.cs" />
      <Compile Include="Assets\ColliderToTrigger.cs" />
      <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectMover.cs" />
      <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectSpawner.cs" />
@@ -134,7 +135,10 @@
      <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRInteractiveItem.cs" />
      <Compile Include="Assets\Kinect2VrExamples\KinectScripts\VrScripts\VRTrackingReset.cs" />
      <Compile Include="Assets\MeshSaveLoad.cs" />
+     <Compile Include="Assets\OBJImport\OBJLoader.cs" />
+     <Compile Include="Assets\OBJImport\TextureLoader.cs" />
      <Compile Include="Assets\SaveTheChildren.cs" />
+     <Compile Include="Assets\SceneControl.cs" />
      <Compile Include="Assets\SerializerFree\Example\Data.cs" />
      <Compile Include="Assets\SerializerFree\Example\Example.cs" />
      <Compile Include="Assets\SerializerFree\Scripts\ISerializer.cs" />
@@ -272,6 +276,7 @@
      <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Depth2ColorShader.shader" />
      <None Include="Assets\freezer\Lava_Flowing_Shader\ReadMe.txt" />
+     <None Include="Assets\OBJImport\readme.txt" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\FlippedColorBodyShader.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Erode.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BodyShader.shader" />

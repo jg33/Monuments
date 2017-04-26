@@ -6,19 +6,30 @@ public class SaveTheChildren : MonoBehaviour {
 
 	public int id;
 	public GameObject meshCopyPrefab;
+	public bool loadOnStart;
+	public float postScale;
+	public Vector3 postLocation;
+
 	private GameObject player;
+
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find("New Player Avatar");
+
+
+		if(loadOnStart){
+			populateAndLoad(id);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey("s")){
-			saveAll(id);
-		} else if (Input.GetKey("l")){
-			populateAndLoad(id);
-		}
+//		if(Input.GetKey("s")){
+//			saveAll(id);
+//		} else if (Input.GetKey("l")){
+//			populateAndLoad(id);
+//		}
 	}
 
 	void saveAll(int _id){
@@ -44,7 +55,7 @@ public class SaveTheChildren : MonoBehaviour {
 
 
 		}
-
-
+		transform.localScale *= postScale;
+		transform.position = postLocation;
 	}
 }

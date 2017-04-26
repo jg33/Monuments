@@ -71,6 +71,7 @@
      <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Depth2ColorShader.shader" />
      <None Include="Assets\freezer\Lava_Flowing_Shader\ReadMe.txt" />
+     <None Include="Assets\OBJImport\readme.txt" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\FlippedColorBodyShader.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Erode.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BodyShader.shader" />
@@ -135,6 +136,9 @@
  <Reference Include="LZ4Sharp">
  <HintPath>/Users/jesse/Dropbox/CalArts/Living Room Interactive/Monuments/monuments_v1/Assets/Kinect2VrExamples/KinectScripts/LZ4Sharp/LZ4Sharp.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/jesse/Dropbox/CalArts/Living Room Interactive/Monuments/monuments_v1/Assets/SerializerFree/Plugins/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity 5.5/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -143,9 +147,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity 5.5/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/jesse/Dropbox/CalArts/Living Room Interactive/Monuments/monuments_v1/Assets/SerializerFree/Plugins/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity 5.5/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

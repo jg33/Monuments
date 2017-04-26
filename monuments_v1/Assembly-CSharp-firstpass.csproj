@@ -67,6 +67,7 @@
      <None Include="Assets\freezer\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Depth2ColorShader.shader" />
      <None Include="Assets\freezer\Lava_Flowing_Shader\ReadMe.txt" />
+     <None Include="Assets\OBJImport\readme.txt" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\FlippedColorBodyShader.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\Erode.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BodyShader.shader" />
