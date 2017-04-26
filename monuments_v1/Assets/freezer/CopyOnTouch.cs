@@ -11,7 +11,7 @@ public class CopyOnTouch : MonoBehaviour {
 
 	Collider thisCollider;
 
-	Mesh thisMesh;
+	public Mesh thisMesh;
 	Vector3[] dyingVerts;
 	int copyCount = 0;
 

@@ -1,0 +1,9 @@
+It is so easy and fast to get started with Serializer Free, see below for fast initialization:
+
+1 - Import the plugins folder to your plugins folder. (Optional)
+2 - Then where your need to serialize anything include "using SerializerFree.Serializers;" and then
+    when you need to serialize any thing do this "Serializer.Serialize (myObj, new BinarySerializer ());".
+
+As you can see the initialization is so fast, because it has no serialization.
+
+See example for more information. (SerializerFree/Example)

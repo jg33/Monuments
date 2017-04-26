@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/ObjExporter.cs">
+    <Files>
+      <File FileName="Assets/MeshSaveLoad.cs" Line="19" Column="3" />
+      <File FileName="Assets/SerializerFree/Example/Example.cs" Line="1" Column="1" />
+      <File FileName="Assets/SerializerFree/Example/Data.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/ObjExporter.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
