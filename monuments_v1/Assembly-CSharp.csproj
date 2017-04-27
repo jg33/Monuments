@@ -138,6 +138,7 @@
      <Compile Include="Assets\MeshSaveLoad.cs" />
      <Compile Include="Assets\OBJImport\OBJLoader.cs" />
      <Compile Include="Assets\OBJImport\TextureLoader.cs" />
+     <Compile Include="Assets\PrevMonumentCtrl.cs" />
      <Compile Include="Assets\SaveTheChildren.cs" />
      <Compile Include="Assets\SceneControl.cs" />
      <Compile Include="Assets\SerializerFree\Example\Data.cs" />
@@ -251,6 +252,8 @@
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+     <Compile Include="Assets\TriggerAudio.cs" />
+     <Compile Include="Assets\TriggerAudioWithCrossfade.cs" />
      <Compile Include="Assets\freezer\CopyFBXMesh-old.cs" />
      <Compile Include="Assets\freezer\CopyMesh-old.cs" />
      <Compile Include="Assets\freezer\CopyOnTouch.cs" />
@@ -259,6 +262,7 @@
      <Compile Include="Assets\freezer\Plugins\Perlin.cs" />
      <Compile Include="Assets\freezer\TouchCopy-old.cs" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BlurShader.shader" />
+     <None Include="Assets\Materials\TransparentShadow.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\DepthShader.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />

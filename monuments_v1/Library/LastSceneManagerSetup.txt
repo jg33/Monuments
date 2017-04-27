@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SaveTest.unity
+- path: Assets/Scenes/Monuments_v1.unity
   isLoaded: 1
   isActive: 1

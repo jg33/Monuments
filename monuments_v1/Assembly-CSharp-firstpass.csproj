@@ -49,6 +49,7 @@
      <Compile Include="Assets\Plugins\ObjExporter.cs" />
      <Compile Include="Assets\Plugins\ObjImporter.cs" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\BlurShader.shader" />
+     <None Include="Assets\Materials\TransparentShadow.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\Kinect2VrExamples\KinectScripts\Resources\DepthShader.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
