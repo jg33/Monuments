@@ -71,8 +71,7 @@ public class SaveTheChildren : MonoBehaviour {
 	public void setCue (int _cue){
 		switch(_cue){
 		case 0:
-			killKids();
-			populateAndLoad(id);
+                reset();
 			break;
 
 		default: 
@@ -86,6 +85,12 @@ public class SaveTheChildren : MonoBehaviour {
     public void setIndex(int _i)
     {
         id = _i;
+        Debug.Log("index set");
+    }
 
+    public void reset()
+    {
+        killKids();
+        populateAndLoad(id);
     }
 }
