@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\AnimateSky.cs" />
      <Compile Include="Assets\ColliderToTrigger.cs" />
+     <Compile Include="Assets\CueToAnimParam.cs" />
      <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectMover.cs" />
      <Compile Include="Assets\Kinect2VrExamples\DemoScenes\AvatarDemo\Scripts\ObjectSpawner.cs" />
      <Compile Include="Assets\Kinect2VrExamples\DemoScenes\GestureDemo\FlyerAssets\Scripts\Asteroid.cs" />
