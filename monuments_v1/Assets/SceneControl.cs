@@ -13,7 +13,7 @@ public class SceneControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentMonumentIndex = PlayerPrefs.GetInt("currentMonumentIndex",0);
-		
+        GameObject.Find("Previous Monuments").SendMessage("setLatestIndex", currentMonumentIndex-1);
 	}
 	
 	// Update is called once per frame
@@ -24,11 +24,8 @@ public class SceneControl : MonoBehaviour {
 		} else if (Input.GetKeyDown("z")){
 			cueNum--;
 		} else if (Input.GetKeyDown("s")){
-			// save current model //
-			GameObject.Find("CopyContainer").SendMessage("saveAll", currentMonumentIndex);
-			currentMonumentIndex++;
-			PlayerPrefs.SetInt("currentMonumentIndex",currentMonumentIndex);
-			PlayerPrefs.Save();
+            // save current model //
+            saveState();
 		} else if (Input.GetKeyDown("l")){
 			// load? //
 		} else if (Input.GetKeyDown("0")){
@@ -52,6 +49,7 @@ public class SceneControl : MonoBehaviour {
 		} else if (Input.GetKeyDown("6")){
 			// save
 			cueNum = 6;
+            saveState();
 		}
 
 
@@ -71,4 +69,12 @@ public class SceneControl : MonoBehaviour {
 		}
 		
 	}
+
+    void saveState()
+    {
+        GameObject.Find("CopyContainer").SendMessage("saveAll", currentMonumentIndex);
+        currentMonumentIndex++;
+        PlayerPrefs.SetInt("currentMonumentIndex", currentMonumentIndex);
+        PlayerPrefs.Save();
+    }
 }
