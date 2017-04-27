@@ -13,7 +13,7 @@ public class SceneControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentMonumentIndex = PlayerPrefs.GetInt("currentMonumentIndex",0);
-		
+        GameObject.Find("CopyContainer").SendMessage("setIndex", currentMonumentIndex);
 	}
 	
 	// Update is called once per frame

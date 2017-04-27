@@ -82,4 +82,10 @@ public class SaveTheChildren : MonoBehaviour {
 		}
 
 	}
+
+    public void setIndex(int _i)
+    {
+        id = _i;
+
+    }
 }
