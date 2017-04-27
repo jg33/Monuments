@@ -55,7 +55,31 @@ public class SaveTheChildren : MonoBehaviour {
 
 
 		}
-		transform.localScale *= postScale;
+		transform.localScale = new Vector3(postScale,postScale,postScale);
 		transform.position = postLocation;
+	}
+
+	void killKids(){
+		GameObject dummy = new GameObject();
+		for (int i=0;i<transform.childCount;i++){
+			transform.GetChild(i).SetParent(dummy.transform);
+		}
+		GameObject.Destroy(dummy);
+
+	}
+
+	public void setCue (int _cue){
+		switch(_cue){
+		case 0:
+			killKids();
+			populateAndLoad(id);
+			break;
+
+		default: 
+			break;
+
+
+		}
+
 	}
 }

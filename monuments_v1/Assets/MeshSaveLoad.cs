@@ -36,4 +36,7 @@ public class MeshSaveLoad : MonoBehaviour {
 		//GetComponent<MeshFilter>().mesh = ObjImporter.ImportFileWithHelp("Assets/SavedMeshes/"+id.ToString()+"_"+gameObject.name+"_copy.obj",originalMesh);
 		Debug.Log("Loaded "+gameObject.name);
 	}
+
+
+
 }
