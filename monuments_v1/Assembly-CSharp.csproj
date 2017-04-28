@@ -143,6 +143,10 @@
      <Compile Include="Assets\PrevMonumentCtrl.cs" />
      <Compile Include="Assets\SaveTheChildren.cs" />
      <Compile Include="Assets\SceneControl.cs" />
+     <Compile Include="Assets\Scripts\AnimateModTex.cs" />
+     <Compile Include="Assets\Scripts\PlayMov.cs" />
+     <Compile Include="Assets\Scripts\heightFade.cs" />
+     <Compile Include="Assets\Scripts\offsetTex.cs" />
      <Compile Include="Assets\SerializerFree\Example\Data.cs" />
      <Compile Include="Assets\SerializerFree\Example\Example.cs" />
      <Compile Include="Assets\SerializerFree\Scripts\ISerializer.cs" />
