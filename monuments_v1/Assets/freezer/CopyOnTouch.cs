@@ -87,11 +87,17 @@ public class CopyOnTouch : MonoBehaviour {
  
                 thisPoint = vertexMatrix.MultiplyPoint3x4(mesh.vertices[copyCount]);
                 thisPoint *= 1.4f;
-                thisPoint += dupeVertexOrigin.transform.position;
-
-            // normals[i] = vertexMatrix.MultiplyVector(mesh.normals[i]);
-            
+                Vector3 offset = dupeVertexOrigin.transform.position;
+               // Vector3 differenceVec = transform.position - duplicateMeshObj.transform.position;
+            //    differenceVec *= 1 / 1.4f;
+            //    offset -= differenceVec;
                 
+                //offset *= 0.94f;
+                thisPoint += offset;
+                //thisPoint *= 0.8f;
+                // normals[i] = vertexMatrix.MultiplyVector(mesh.normals[i]);
+
+
 
 
                 tempVerts[copyCount] = thisPoint;
