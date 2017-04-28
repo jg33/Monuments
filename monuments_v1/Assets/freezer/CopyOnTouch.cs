@@ -118,7 +118,7 @@ public class CopyOnTouch : MonoBehaviour {
 				// ITERATE //
 				copyCount++;
 
-			}
+			} 
 
 
 
