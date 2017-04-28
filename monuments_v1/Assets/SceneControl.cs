@@ -10,9 +10,17 @@ public class SceneControl : MonoBehaviour {
 
 	public int currentMonumentIndex;
 
+    public bool overrideMonumentIndex = false;
 	// Use this for initialization
 	void Start () {
-		currentMonumentIndex = PlayerPrefs.GetInt("currentMonumentIndex",0);
+        if (overrideMonumentIndex){
+            //currentMonumentIndex = PlayerPrefs.GetInt("currentMonumentIndex", 0);
+            PlayerPrefs.SetInt("currentMonumentIndex", currentMonumentIndex);
+            PlayerPrefs.Save();
+        }else{
+            currentMonumentIndex = PlayerPrefs.GetInt("currentMonumentIndex", 0);
+
+        }
         GameObject.Find("Previous Monuments").SendMessage("setLatestIndex", currentMonumentIndex-1);
 	}
 	
