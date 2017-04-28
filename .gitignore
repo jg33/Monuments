@@ -4,34 +4,34 @@ monuments_v1/Assets/SavedMeshes/*
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-/[Bb]uilds/
-/[Ll]ibrary/
-sysinfo.txt
-*.stackdump
-/Assets/AssetStoreTools*
-*.apk
-*.unitypackage
+monuments_v1/[Tt]emp/
+monuments_v1/[Oo]bj/
+monuments_v1/[Bb]uild
+monuments_v1/[Bb]uilds/
+monuments_v1/[Ll]ibrary/
+monuments_v1sysinfo.txt
+monuments_v1/*.stackdump
+monuments_v1/Assets/AssetStoreTools*
+monuments_v1/*.apk
+monuments_v1/*.unitypackage
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
-.vs/
-/*.userprefs
-/*.csproj
-/*.pidb
-*.pidb.meta
-/*.suo
-/*.sln*
-/*.user
-/*.unityproj
-/*.booproj
-.consulo/
-/*.tmp
-/*.svd
+monuments_v1/[Ee]xported[Oo]bj/
+monuments_v1/.vs/
+monuments_v1/*.userprefs
+monuments_v1/*.csproj
+monuments_v1/*.pidb
+monuments_v1/*.pidb.meta
+monuments_v1/*.suo
+monuments_v1/*.sln*
+monuments_v1/*.user
+monuments_v1/*.unityproj
+monuments_v1/*.booproj
+monuments_v1/.consulo/
+*.tmp
+*.svd
  
 # ============ #
 # OS generated #
@@ -44,5 +44,5 @@ Icon?
 ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.ini
-Corridor/Library/ShaderCache/
-Corridor/Library/metadata/
+monuments_v1/Corridor/Library/ShaderCache/
+monuments_v1/Corridor/Library/metadata/
